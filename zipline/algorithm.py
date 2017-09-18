@@ -292,10 +292,7 @@ class TradingAlgorithm(object):
             "NYSE"
         )
 
-        if not calendar:
-            self.trading_calendar = get_calendar("NYSE")
-        else:
-            self.trading_calendar = get_calendar(calendar)
+        self.trading_calendar = get_calendar(calendar)
 
         self.sim_params = kwargs.pop('sim_params', None)
         if self.sim_params is None:
