@@ -299,7 +299,7 @@ class TradingAlgorithm(object):
             self.sim_params = create_simulation_parameters(
                 start=kwargs.pop('start', None),
                 end=kwargs.pop('end', None),
-                trading_calendar=self.trading_calendar,
+                trading_calendar=calendar,
             )
 
         self.perf_tracker = None

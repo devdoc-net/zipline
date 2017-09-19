@@ -60,3 +60,6 @@ piprot==0.9.6
 
 # For mocking out requests fetches
 responses==0.4.0
+
+# Debugging
+pdbpp==0.9.1
