@@ -289,7 +289,7 @@ class TradingAlgorithm(object):
         # If a schedule has been provided, pop it. Otherwise, use NYSE.
         calendar = kwargs.pop(
             'trading_calendar',
-            "NYSE"
+            'NYSE'
         )
 
         self.trading_calendar = get_calendar(calendar)
