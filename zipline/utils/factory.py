@@ -42,6 +42,8 @@ def create_simulation_parameters(year=2006,
 
     if not trading_calendar:
         trading_calendar = get_calendar("NYSE")
+    elif type(trading_calendar) != str:
+        pass
     else:
         trading_calendar = get_calendar(trading_calendar)
 
