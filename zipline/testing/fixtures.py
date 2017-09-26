@@ -598,6 +598,8 @@ class WithSimParams(WithTradingEnvironment):
     SIM_PARAMS_START = alias('START_DATE')
     SIM_PARAMS_END = alias('END_DATE')
 
+    SIM_PARAMS_CALENDAR = 'NYSE'
+
     @classmethod
     def make_simparams(cls):
         return factory.create_simulation_parameters(
@@ -608,7 +610,7 @@ class WithSimParams(WithTradingEnvironment):
             capital_base=cls.SIM_PARAMS_CAPITAL_BASE,
             data_frequency=cls.SIM_PARAMS_DATA_FREQUENCY,
             emission_rate=cls.SIM_PARAMS_EMISSION_RATE,
-            trading_calendar=cls.trading_calendar,
+            trading_calendar=cls.SIM_PARAMS_CALENDAR,
         )
 
     @classmethod
